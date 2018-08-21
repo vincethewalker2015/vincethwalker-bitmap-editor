@@ -1,16 +1,21 @@
 class BitmapEditor
+  def initialize(input, commands)
+    @input = input
+    @commands = commands
+  end
 
-  def run(file)
-    return puts "please provide correct file" if file.nil? || !File.exists?(file)
+  def run
+    @input.print '> '
+    command = @input.gets.strip.upcase
 
-    File.open(file).each do |line|
-      line = line.chomp
-      case line
-      when 'S'
-          puts "There is no image"
-      else
-          puts 'unrecognised command :('
-      end
-    end
+    execute command
+  end
+
+  private
+
+  def execute command
+    type, *args = command.split ' '
+
+    @commands[type].run args
   end
 end
