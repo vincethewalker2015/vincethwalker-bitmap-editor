@@ -1,3 +1,5 @@
+# Project
+
 Produce a Ruby 2.3 program that simulates a basic interactive bitmap editor.
 Bitmaps are represented as an M x N matrix of pixels with each element
 representing a colour.
@@ -57,3 +59,5 @@ OWOOO
 
 # Running The Specs
 ```bundle exec guard start```
+```select X to leave program```
+
