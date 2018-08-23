@@ -55,7 +55,7 @@ OWOOO
 
 # Running The Program
 
-```bundle exec ruby runner.rb```
+```bundle exec ruby kickass.rb```
 
 # Running The Specs
 ```bundle exec guard start```
